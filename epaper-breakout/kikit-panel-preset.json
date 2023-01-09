@@ -1,0 +1,40 @@
+{
+    "source": {
+        "tolerance": "20mm"
+    },
+    "tabs": {
+        "type": "fixed",
+        "vcount": "2",
+        "hcount": "0"
+    },
+    "cuts": {
+        "type": "mousebites",
+        "spacing": "0.6mm",
+        "offset": "0.2mm",
+        "prolong": "0.2mm"
+    },
+    "framing": {
+        "type": "frame",
+        "mintotalheight": "80mm",
+        "mintotalwidth": "80mm",
+        "fillet": "1mm"
+    },
+    "tooling": {
+        "type": "3hole",
+        "hoffset": "5mm",
+        "voffset": "5mm",
+        "size": "3mm",
+        "paste": "True"
+    },
+    "text": {
+        "type": "simple",
+        "voffset": "5mm",
+        "text": "JLCJLCJLCJLC"
+    },
+    "post": {
+        "copperfill": "True",
+        "millradius": "1mm",
+        "reconstructarcs": "True",
+        "refillzones": "True"
+    }
+}
