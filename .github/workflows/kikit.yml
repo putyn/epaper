@@ -1,0 +1,27 @@
+name: kikit
+
+on:
+  workflow_dispatch:
+  
+env:
+  schema: "epaper-breakout/*.kicad_sch"
+  board: "epaper-breakout/*.kicad_pcb"
+  dir: "epaper-breakout"
+  
+jobs:
+  kikit-gerbers:
+    runs-on: ubuntu-latest
+    container:
+      image: yaqwsx/kikit:latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: kikit version
+        run: |
+          kikit --version
+      - name: kikit gerbers
+        run: |
+          kikit fab jlcpcb --no-drc ${{env.board}}  ${{env.dir}}/output
+      - name: list files
+        run: ls -R
+          
+      
